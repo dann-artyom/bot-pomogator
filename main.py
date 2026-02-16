@@ -1,8 +1,17 @@
 import telebot
-import time
-import webbrowser
 from telebot import types
-bot=telebot.TeleBot('8220423257:AAFk0zQ35uNJXYHxzvVgudyb-_nzu4OsePU')
+
+# ---------- НАСТРОЙКИ ----------
+TOKEN = '8220423257:AAFk0zQ35uNJXYHxzvVgudyb-_nzu4OsePU'   # замените при необходимости
+ADMIN_CHAT_ID = 1913203736  # ⚠️ ВСТАВЬТЕ СВОЙ ЧАТ-ID (можно узнать у @userinfobot)
+# --------------------------------
+
+bot = telebot.TeleBot(TOKEN)
+
+# Состояния пользователей: True если ожидается ввод вопроса
+waiting_for_question = {}
+
+# ---------- База данных ----------
 questions_db = {
     "Общежития в НГТУ": {
         "name": "Общежития в НГТУ",
@@ -47,20 +56,25 @@ questions_db = {
             {"id": "OVCH", "text":"Овчинникова Елена Владимировна", "answer":"Преподаватель по линейной алгебре и дискретной математике. Очень интересно и понятно ведет семинары и лекции, на ее парах ты понимаешь абсолютно все. Если это твой семинарист - это победа.  Уважайте и любите .  Пишите лекции, на экзамене можно воспользоваться ими в течение 10 минут."},
             {"id": "PLV", "text":"Павшок Людмила Викторовнана", "answer":"преподаватель по матанализу. Требовательная и строгая, но справедливая. На ее парах нельзя отвлекаться и обязательно писать все, что она говорит. Лекции, которые она давала, можно использовать на экзамене (10 минут) поэтому пишите понятно и разборчиво. Если хотите автомат , получайте на семинарах максимально много баллов, делайте курс в dispace и доработки."},
             {"id": "FVV", "text":"Филатов Владимир Викторович", "answer":"Преподаватель по матанализу. Выглядит строгим, любит ворчать, но в конце всегда без проблем ставит 3 автоматом(примерно от 30 баллов), на лекции можно не ходить, все презентации есть у него в курсе.\nНо вот если вам нужна 4 или 5, то тут будет тяжеловато, билеты там трудные, ищите сливы, на самом экзамене списать довольно легко, главное потом объяснить что написал."}
-            
         ]
     },
 }
 
 def get_topics_keyboard():
-    """Инлайн-клавиатура со списком тем."""
+    """Инлайн-клавиатура со списком тем + кнопка 'Задать свой вопрос'."""
     keyboard = types.InlineKeyboardMarkup(row_width=1)
     for topic_id, topic_data in questions_db.items():
         button = types.InlineKeyboardButton(
             text=topic_data["name"],
-            callback_data=f"topic_{topic_id}"   
+            callback_data=f"topic_{topic_id}"
         )
         keyboard.add(button)
+    # Добавляем кнопку для отправки вопроса разработчику
+    ask_button = types.InlineKeyboardButton(
+        text="✏️ Задать свой вопрос",
+        callback_data="ask_question"
+    )
+    keyboard.add(ask_button)
     return keyboard
 
 def get_questions_keyboard(topic_id):
@@ -68,10 +82,9 @@ def get_questions_keyboard(topic_id):
     keyboard = types.InlineKeyboardMarkup(row_width=1)
     topic = questions_db[topic_id]
     for question in topic["questions"]:
-        # В callback_data передаём только идентификатор вопроса (буквы, цифры, подчёркивание)
         button = types.InlineKeyboardButton(
             text=question["text"],
-            callback_data=f"q_{topic_id}_{question['id']}"   # q_<topic_id>_<question_id>
+            callback_data=f"q_{topic_id}_{question['id']}"
         )
         keyboard.add(button)
     # Кнопка "Назад"
@@ -84,17 +97,77 @@ def get_questions_keyboard(topic_id):
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
+    chat_id = message.chat.id
+    # Сбрасываем возможное состояние ожидания вопроса
+    if chat_id in waiting_for_question:
+        del waiting_for_question[chat_id]
     welcome_text = "👋 Привет! Я — бот-помогатор.\nВыберите интересующую вас тему:"
     bot.send_message(
-        message.chat.id,
+        chat_id,
         welcome_text,
         reply_markup=get_topics_keyboard()
     )
+
+@bot.message_handler(commands=['cancel'])
+def cancel_input(message):
+    chat_id = message.chat.id
+    if waiting_for_question.get(chat_id):
+        del waiting_for_question[chat_id]
+        bot.send_message(
+            chat_id,
+            "❌ Ввод вопроса отменён.",
+            reply_markup=get_topics_keyboard()
+        )
+    else:
+        bot.send_message(chat_id, "Нет активного ввода вопроса.")
+
+@bot.message_handler(func=lambda message: True)
+def handle_message(message):
+    chat_id = message.chat.id
+    # Если пользователь в режиме ожидания вопроса
+    if waiting_for_question.get(chat_id):
+        # Любое текстовое сообщение считаем вопросом
+        question_text = message.text.strip()
+        if not question_text:
+            bot.send_message(chat_id, "Пожалуйста, напишите ваш вопрос.")
+            return
+
+        # Формируем информацию об отправителе
+        user = message.from_user
+        user_info = f"@{user.username}" if user.username else f"{user.first_name} (id: {user.id})"
+        full_info = f"✉️ Новый вопрос от {user_info}:\n\n{question_text}"
+
+        # Отправляем администратору
+        try:
+            bot.send_message(ADMIN_CHAT_ID, full_info)
+        except Exception as e:
+            print(f"Не удалось отправить сообщение: {e}")
+
+        # Подтверждение пользователю
+        bot.send_message(
+            chat_id,
+            "✅ Спасибо! Ваш вопрос передан разработчику. Он будет рассмотрен и, возможно, добавлен в базу.",
+            reply_markup=get_topics_keyboard()
+        )
+        # Сбрасываем состояние
+        del waiting_for_question[chat_id]
+    else:
+        # Игнорируем остальные сообщения (можно добавить стандартный ответ)
+        pass
 
 @bot.callback_query_handler(func=lambda call: True)
 def callback_handler(call):
     chat_id = call.message.chat.id
     message_id = call.message.message_id
+
+    # Если пользователь в режиме ожидания вопроса и нажал не на кнопку "Задать вопрос"
+    if waiting_for_question.get(chat_id) and call.data != "ask_question":
+        bot.answer_callback_query(
+            call.id,
+            "Сначала завершите ввод вопроса (отправьте /cancel для отмены).",
+            show_alert=True
+        )
+        return
 
     # ---------- Обработка нажатия на тему ----------
     if call.data.startswith("topic_"):
@@ -104,7 +177,6 @@ def callback_handler(call):
             bot.answer_callback_query(call.id, "❌ Тема не найдена!")
             return
 
-        # Редактируем сообщение: показываем вопросы
         bot.edit_message_text(
             chat_id=chat_id,
             message_id=message_id,
@@ -115,8 +187,7 @@ def callback_handler(call):
 
     # ---------- Обработка нажатия на вопрос ----------
     elif call.data.startswith("q_"):
-        # Формат: q_<topic_id>_<question_id>
-        parts = call.data.split("_", 2)  # ['q', topic_id, question_id]
+        parts = call.data.split("_", 2)
         if len(parts) != 3:
             bot.answer_callback_query(call.id, "❌ Некорректный запрос")
             return
@@ -126,13 +197,11 @@ def callback_handler(call):
             bot.answer_callback_query(call.id, "❌ Тема не найдена!")
             return
 
-        # Ищем вопрос по id
         question_obj = next((q for q in topic["questions"] if q["id"] == question_id), None)
         if not question_obj:
             bot.answer_callback_query(call.id, "❌ Вопрос не найден!")
             return
 
-        # Отправляем ответ
         bot.send_message(
             chat_id,
             f"❓ *{question_obj['text']}*\n\n💬 {question_obj['answer']}",
@@ -150,6 +219,18 @@ def callback_handler(call):
             message_id=message_id,
             text="Выберите интересующую вас тему:",
             reply_markup=get_topics_keyboard()
+        )
+        bot.answer_callback_query(call.id)
+
+    # ---------- Задать свой вопрос ----------
+    elif call.data == "ask_question":
+        waiting_for_question[chat_id] = True
+        bot.edit_message_text(
+            chat_id=chat_id,
+            message_id=message_id,
+            text="✏️ Напишите ваш вопрос простым текстом.\n\n"
+                 "Я передам его разработчику. Чтобы отменить, отправьте /cancel.",
+            reply_markup=None  # убираем клавиатуру
         )
         bot.answer_callback_query(call.id)
 
