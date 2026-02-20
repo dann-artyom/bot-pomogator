@@ -1,141 +1,182 @@
 {
   "Общежития в НГТУ": {
-    "name": "Общежития в НГТУ",
+    "name_ru": "Общежития в НГТУ",
+    "name_en": "Dormitories at NSTU",
     "questions": [
       {
         "id": "ob10",
         "text": "Что нужно сделать чтобы попасть в 10 общежитие НГТУ?",
-        "answer": "Если вы поступающий, то необходимо набрать >=250 баллов, проходное количество балов может меняться каждый год\nЕсли вы студент, то для заселения в 10 общежитие вам необходимо стать отсличником(сочувствую)"
+        "text_en": "What is needed to get into dormitory 10 at NSTU?",
+        "answer": "Если вы поступающий, то необходимо набрать >=250 баллов, проходное количество балов может меняться каждый год\nЕсли вы студент, то для заселения в 10 общежитие вам необходимо стать отсличником(сочувствую)",
+        "answer_en": "If you are an applicant, you need to score >=250 points (the passing score may change each year).\nIf you are a student, to move into dormitory 10 you need to become an excellent student (sorry)."
       },
       {
         "id": "venv",
         "text": "Как пропустить гостя в общежитие",
-        "answer": "Для этого студенту необходимо иметь студенческий билет, а гостю паспорт(или другой документ удостоверяющий личность)\nГостей можно приводить с 10 до 22"
+        "text_en": "How to let a guest into the dormitory?",
+        "answer": "Для этого студенту необходимо иметь студенческий билет, а гостю паспорт(или другой документ удостоверяющий личность)\nГостей можно приводить с 10 до 22",
+        "answer_en": "The student must have a student ID, and the guest must have a passport (or other ID).\nGuests are allowed from 10:00 to 22:00."
       },
       {
         "id": "listcomp",
         "text": "Если я живу в одном общежитии, могу ли я попасть в другое?",
-        "answer": "Самостоятельно пройти в другое общежитие вы не можете, вы можете пройти только как гость"
+        "text_en": "If I live in one dormitory, can I enter another one?",
+        "answer": "Самостоятельно пройти в другое общежитие вы не можете, вы можете пройти только как гость",
+        "answer_en": "You cannot enter another dormitory on your own; you can only enter as a guest."
       },
       {
         "id": "RASS",
         "text": "Как происходит расселение в общежития?",
-        "answer": "Всего в НГТУ 10 общежитий, 1 общежитие для аспирантов, 1 общежитие для СПО, 10 общежитие для первокурсников с высокими баллами или студентов отличников. Каждый факультет прикреплён к общежитию 1-7, подробную информацию об этом можно узнать на сайте.\nТак же в здании 6 общежития есть общежитие повышенного комфорта(ОПК), куда может заселиться любой студент(но цена проживания там выше)"
+        "text_en": "How does accommodation in dormitories work?",
+        "answer": "Всего в НГТУ 10 общежитий, 1 общежитие для аспирантов, 1 общежитие для СПО, 10 общежитие для первокурсников с высокими баллами или студентов отличников. Каждый факультет прикреплён к общежитию 1-7, подробную информацию об этом можно узнать на сайте.\nТак же в здании 6 общежития есть общежитие повышенного комфорта(ОПК), куда может заселиться любой студент(но цена проживания там выше)",
+        "answer_en": "NSTU has 10 dormitories: 1 for postgraduates, 1 for vocational education, and dormitory 10 for first-year students with high scores or excellent students. Each faculty is assigned to dormitories 1–7 (details on the website). In building 6, there is a higher-comfort dormitory (OPC) that any student can move into (but the price is higher)."
       }
     ]
   },
   "Процесс поступления в НГТУ": {
-    "name": "Процесс поступления в НГТУ",
+    "name_ru": "Процесс поступления в НГТУ",
+    "name_en": "Admission Process at NSTU",
     "questions": [
       {
         "id": "token",
         "text": "Как встать на миграционный учёт?",
-        "answer": "После пересечения границы, необходимо подать документы в личном кабинете абитуриента в разделе миграционный учет, а поле следить за статусом заявки."
+        "text_en": "How to register for migration?",
+        "answer": "После пересечения границы, необходимо подать документы в личном кабинете абитуриента в разделе миграционный учет, а поле следить за статусом заявки.",
+        "answer_en": "After crossing the border, you need to submit documents in the applicant's personal account under 'Migration registration', and then monitor the application status."
       },
       {
         "id": "enter",
         "text": "С чего начать поступление в НГТУ?",
-        "answer": "Сначала зайдите на оффициальный сайт НГТУ и ознакомьтесь с вузом и направлениями, после выбора направления вам нужно подать заявку на участие в конкурсе, есть 2 способа это сделать:\n1. Через Госуслуги.\n 2.Через сайт НГТУ в кабинете абитуриента."
+        "text_en": "Where to start admission to NSTU?",
+        "answer": "Сначала зайдите на оффициальный сайт НГТУ и ознакомьтесь с вузом и направлениями, после выбора направления вам нужно подать заявку на участие в конкурсе, есть 2 способа это сделать:\n1. Через Госуслуги.\n 2.Через сайт НГТУ в кабинете абитуриента.",
+        "answer_en": "First, visit the official NSTU website and familiarize yourself with the university and programs. After choosing a program, you need to apply for the competition. There are two ways:\n1. Through Gosuslugi.\n2. Through the NSTU website in the applicant's account."
       }
     ]
   },
   "Кафе и магазины": {
-    "name": "Кафе и магазины",
+    "name_ru": "Кафе и магазины",
+    "name_en": "Cafes and Shops",
     "questions": [
       {
         "id": "undo",
         "text": "Где можно купить лучшую шаурму?",
-        "answer": "В высоком ценовом сегменте лучшая шаурму в районе метро студенческая «Jungle Chef» в низшим ценовом сегменте «Шаурма на студенческой»"
+        "text_en": "Where can I buy the best shawarma?",
+        "answer": "В высоком ценовом сегменте лучшая шаурму в районе метро студенческая «Jungle Chef» в низшим ценовом сегменте «Шаурма на студенческой»",
+        "answer_en": "In the high price segment: 'Jungle Chef' near Studencheskaya metro station. In the low price segment: 'Shawarma on Studencheskaya'."
       },
       {
         "id": "conflict",
         "text": "Сколько столовых на территории НГТУ? Какая самая лучшая?",
-        "answer": "В каждом корпусе НГТУ есть своя столовая. По статистике люди предпочитают столовую в 6-ом корпусе «Яблоко Ньютона»"
+        "text_en": "How many canteens are on the NSTU campus? Which is the best?",
+        "answer": "В каждом корпусе НГТУ есть своя столовая. По статистике люди предпочитают столовую в 6-ом корпусе «Яблоко Ньютона»",
+        "answer_en": "Each NSTU building has its own canteen. According to statistics, people prefer the canteen in building 6, 'Newton's Apple'."
       },
       {
         "id": "branch",
         "text": "Какие самые ближайшие продуктовые магазины?",
-        "answer": "Два ближайших продуктовых ммагазина это Лента и Мария-ра, но если пройти дальше, в сторону реки, то можно найти Ярче!"
+        "text_en": "Which grocery stores are closest?",
+        "answer": "Два ближайших продуктовых ммагазина это Лента и Мария-ра, но если пройти дальше, в сторону реки, то можно найти Ярче!",
+        "answer_en": "The two nearest grocery stores are Lenta and Maria-Ra, but if you go further towards the river, you can find Yarchе!"
       }
     ]
   },
   "Библиотека": {
-    "name": "Библиотека",
+    "name_ru": "Библиотека",
+    "name_en": "Library",
     "questions": [
       {
         "id": "RET",
         "text": "Как вернуть книги в библиотеку?",
-        "answer": "Справа от входа в библиотеку находится место для возврата книг, книги нужно класть по 1, из вашего личного кабинета книги уберуться сами."
+        "text_en": "How to return books to the library?",
+        "answer": "Справа от входа в библиотеку находится место для возврата книг, книги нужно класть по 1, из вашего личного кабинета книги уберуться сами.",
+        "answer_en": "To the right of the library entrance, there is a book return area. You need to put books one by one; they will be removed from your account automatically."
       }
     ]
   },
   "Учёба в НГТУ": {
-    "name": "Учёба в НГТУ",
+    "name_ru": "Учёба в НГТУ",
+    "name_en": "Studying at NSTU",
     "questions": [
       {
         "id": "control",
         "text": "Что такое контрольные недели и зачем они нужны?",
-        "answer": "Всего в семестре 3 контрольных недели (на 5,9 и 13 неделях)\nБольшинство преподавателей проводят контрольные в это время, по каждому предмету выставляется 0-2 баллов, однако это лишь формальность, эти баллы практически не на что не влияют\nНо если у вас будет много нулей, то вас могут вызвать в деканат :)"
+        "text_en": "What are control weeks and why are they needed?",
+        "answer": "Всего в семестре 3 контрольных недели (на 5,9 и 13 неделях)\nБольшинство преподавателей проводят контрольные в это время, по каждому предмету выставляется 0-2 баллов, однако это лишь формальность, эти баллы практически не на что не влияют\nНо если у вас будет много нулей, то вас могут вызвать в деканат :)",
+        "answer_en": "There are 3 control weeks per semester (weeks 5, 9, and 13). Most teachers give tests during this time; each subject gets 0–2 points, but this is mostly a formality and hardly affects anything. However, if you have many zeros, you may be called to the dean's office :)"
       },
       {
         "id": "str",
         "text": "В результате сессии я получил 2 или >=2 троек, теперь меня выгонят из 10 общежития?",
-        "answer": "Нет.\nВыселение произойдёт через 3 недели после начала нового семестра, за это время у вас есть возможность пересдать нужные предметы(даже с 3 на 4, если получится договориться с преподаватетем)."
+        "text_en": "I got a 2 or >=2 Cs in the exam session, will I be expelled from dormitory 10?",
+        "answer": "Нет.\nВыселение произойдёт через 3 недели после начала нового семестра, за это время у вас есть возможность пересдать нужные предметы(даже с 3 на 4, если получится договориться с преподаватетем).",
+        "answer_en": "No. Eviction occurs 3 weeks after the start of the new semester. During this time, you have the opportunity to retake the required subjects (even from a 3 to a 4, if you can negotiate with the teacher)."
       },
       {
         "id": "100b",
         "text": "Как работает 100 бальная шкала?",
-        "answer": "50-72-тройка\n73-86-четвёрка\n87+ - пятёрка\nПо зачётным дисциплинам на зачёт достаточно набрать 50 баллов, однако преподаватели могут выставлять дополнительные требования для зачёта.\nПо дисциплинам с сессией обычно 60 баллов зарабатываются на практиках и 40 на сессии, но преподаватели могут менять разбалловку"
+        "text_en": "How does the 100-point scale work?",
+        "answer": "50-72-тройка\n73-86-четвёрка\n87+ - пятёрка\nПо зачётным дисциплинам на зачёт достаточно набрать 50 баллов, однако преподаватели могут выставлять дополнительные требования для зачёта.\nПо дисциплинам с сессией обычно 60 баллов зарабатываются на практиках и 40 на сессии, но преподаватели могут менять разбалловку",
+        "answer_en": "50-72 = C\n73-86 = B\n87+ = A\nFor pass/fail subjects, 50 points are enough to pass, but teachers may have additional requirements.\nFor exam subjects, usually 60 points are earned during the semester and 40 on the exam, but teachers may change the distribution."
       }
     ]
   },
   "Отзывы о Преподавателях": {
-    "name": "Отзывы о Преподавателях",
+    "name_ru": "Отзывы о Преподавателях",
+    "name_en": "Teacher Reviews",
     "questions": [
       {
         "id": "OVCH",
         "text": "Овчинникова Елена Владимировна",
-        "answer": "Преподаватель по линейной алгебре и дискретной математике. Очень интересно и понятно ведет семинары и лекции, на ее парах ты понимаешь абсолютно все. Если это твой семинарист - это победа.  Уважайте и любите .  Пишите лекции, на экзамене можно воспользоваться ими в течение 10 минут."
+        "answer": "Преподаватель по линейной алгебре и дискретной математике. Очень интересно и понятно ведет семинары и лекции, на ее парах ты понимаешь абсолютно все. Если это твой семинарист - это победа.  Уважайте и любите .  Пишите лекции, на экзамене можно воспользоваться ими в течение 10 минут.",
+        "answer_en": "Teacher of linear algebra and discrete mathematics. Conducts seminars and lectures in a very interesting and understandable way; in her classes you understand absolutely everything. If she is your seminar teacher, it's a win. Respect and love her. Write down lectures; you can use them for 10 minutes during the exam."
       },
       {
         "id": "PLV",
         "text": "Павшок Людмила Викторовнана",
-        "answer": "преподаватель по матанализу. Требовательная и строгая, но справедливая. На ее парах нельзя отвлекаться и обязательно писать все, что она говорит. Лекции, которые она давала, можно использовать на экзамене (10 минут) поэтому пишите понятно и разборчиво. Если хотите автомат , получайте на семинарах максимально много баллов, делайте курс в dispace и доработки."
+        "answer": "преподаватель по матанализу. Требовательная и строгая, но справедливая. На ее парах нельзя отвлекаться и обязательно писать все, что она говорит. Лекции, которые она давала, можно использовать на экзамене (10 минут) поэтому пишите понятно и разборчиво. Если хотите автомат , получайте на семинарах максимально много баллов, делайте курс в dispace и доработки.",
+        "answer_en": "Mathematical analysis teacher. Demanding and strict but fair. In her classes, you cannot get distracted and must write everything she says. The lectures she gives can be used during the exam (10 minutes), so write clearly and legibly. If you want an automatic grade, earn as many points as possible in seminars, complete the course in Dispace, and do revisions."
       },
       {
         "id": "FVV",
         "text": "Филатов Владимир Викторович",
-        "answer": "Преподаватель по матанализу. Выглядит строгим, любит ворчать, но в конце всегда без проблем ставит 3 автоматом(примерно от 30 баллов), на лекции можно не ходить, все презентации есть у него в курсе.\nНо вот если вам нужна 4 или 5, то тут будет тяжеловато, билеты там трудные, ищите сливы, на самом экзамене списать довольно легко, главное потом объяснить что написал."
+        "answer": "Преподаватель по матанализу. Выглядит строгим, любит ворчать, но в конце всегда без проблем ставит 3 автоматом(примерно от 30 баллов), на лекции можно не ходить, все презентации есть у него в курсе.\nНо вот если вам нужна 4 или 5, то тут будет тяжеловато, билеты там трудные, ищите сливы, на самом экзамене списать довольно легко, главное потом объяснить что написал.",
+        "answer_en": "Mathematical analysis teacher. Looks strict, likes to grumble, but at the end always gives a 3 automatically (from about 30 points). You don't have to attend lectures; all presentations are in his course. But if you need a 4 or 5, it will be harder; the exam tickets are difficult, look for leaks; cheating during the exam is quite easy, the main thing is to explain what you wrote."
       },
       {
         "id": "GMC",
         "text": "Галлямова Марина Сергеевна",
-        "answer": "Преподаватель по матанализу. Прекрасный преподаватель, если приложить чуть чуть усилий, то закрыть предмет не составит труда. Объясняет отлично, на экзаменах помогает студентам"
+        "answer": "Преподаватель по матанализу. Прекрасный преподаватель, если приложить чуть чуть усилий, то закрыть предмет не составит труда. Объясняет отлично, на экзаменах помогает студентам",
+        "answer_en": "Mathematical analysis teacher. An excellent teacher; if you put in a little effort, it's easy to pass the subject. Explains perfectly, helps students during exams."
       },
       {
         "id": "CTN",
         "text": "Стуканов Тимур Николаевич",
-        "answer": "Преподаватель по ОЛКК и ОПД. Преподаватель со своими странностями. Он убежден что девушки которые курят электронный сигареты и парогенераторы представляют вместо этого мужского детородный орган. Так же уверен что девушки которые красят волосы, являются девушками легкого поведения. На его лекциях ничего делать не надо, просто сидите и слушайте его бред."
+        "answer": "Преподаватель по ОЛКК и ОПД. Преподаватель со своими странностями. Он убежден что девушки которые курят электронный сигареты и парогенераторы представляют вместо этого мужского детородный орган. Так же уверен что девушки которые красят волосы, являются девушками легкого поведения. На его лекциях ничего делать не надо, просто сидите и слушайте его бред.",
+        "answer_en": "Teacher of OLKK and OPD. A teacher with his quirks. He believes that girls who smoke electronic cigarettes and vapes are representing the male reproductive organ instead. He is also convinced that girls who dye their hair are of easy virtue. In his lectures, you don't have to do anything, just sit and listen to his nonsense."
       },
       {
         "id": "CHAB",
         "text": "Чехонадских А. В.",
-        "answer": "Препод настроения. Ведёт линейную алгебру и дискретную математику.\nЛюбит травить шутки про пиратов и адвокатов, над которыми смеётся только он сам. Лучше писать все его кр, т.к. они идут в сумму баллов за семестр. Экзамен несложный, если к нему подготовиться, лучше использовать бумажные шпаргалки, чем скатывать с телефона – он сразу выгоняет, а дальше пересдача. В целом, если выполнять все его требования, то сдать реально."
+        "answer": "Препод настроения. Ведёт линейную алгебру и дискретную математику.\nЛюбит травить шутки про пиратов и адвокатов, над которыми смеётся только он сам. Лучше писать все его кр, т.к. они идут в сумму баллов за семестр. Экзамен несложный, если к нему подготовиться, лучше использовать бумажные шпаргалки, чем скатывать с телефона – он сразу выгоняет, а дальше пересдача. В целом, если выполнять все его требования, то сдать реально.",
+        "answer_en": "Mood teacher. Teaches linear algebra and discrete mathematics. Likes to tell jokes about pirates and lawyers, at which only he laughs. Better to write all his tests, as they count towards the semester score. The exam is not difficult if you prepare; better to use paper cheat sheets than to cheat from a phone — he immediately kicks you out, then retake. Overall, if you meet all his requirements, it's possible to pass."
       },
       {
         "id": "MYAA",
         "text": "Мерзликина Яна Александровна",
-        "answer": "Преподаватель мат.анализа. Хороший преподаватель,на лекции писать нужно много.На практике если что-то непонятно всегда объяснит.Даже если у вас плохо с математикой,если постараться можно получить 3.Так же есть возможность получить автомат.Если с первого раза пишите контрольную и сдаете коллоквиум"
+        "answer": "Преподаватель мат.анализа. Хороший преподаватель,на лекции писать нужно много.На практике если что-то непонятно всегда объяснит.Даже если у вас плохо с математикой,если постараться можно получить 3.Так же есть возможность получить автомат.Если с первого раза пишите контрольную и сдаете коллоквиум",
+        "answer_en": "Mathematical analysis teacher. Good teacher; in lectures you need to write a lot. In practice, if something is unclear, she always explains. Even if you are bad at math, you can get a 3 if you try. There is also an opportunity to get an automatic grade. If you write the test and pass the colloquium on the first try."
       },
       {
         "id": "VNG",
         "text": "Вахрушева Наталья Григорьевна",
-        "answer": "математический анализ.\nОчень хороший преподаватель. Зарабатываешь баллы на автомат за семестр, на 3 - 50б, на 4 - 73б, на 5 - 87б. Если нет, то пишешь экзамен, там все заработанные баллы сгорают, состоит из 10 задач. Обязательно сдавать ИДЗ в срок, нормально писать проверочные, если они написаны плохо, а кр хорошо, то следует собеседование, где студент должен рассказать как решил задачи. Может иногда на плюсы проверить домашку. Не опаздывать на лекции"
+        "answer": "математический анализ.\nОчень хороший преподаватель. Зарабатываешь баллы на автомат за семестр, на 3 - 50б, на 4 - 73б, на 5 - 87б. Если нет, то пишешь экзамен, там все заработанные баллы сгорают, состоит из 10 задач. Обязательно сдавать ИДЗ в срок, нормально писать проверочные, если они написаны плохо, а кр хорошо, то следует собеседование, где студент должен рассказать как решил задачи. Может иногда на плюсы проверить домашку. Не опаздывать на лекции",
+        "answer_en": "Mathematical analysis. A very good teacher. You earn points for an automatic grade during the semester: 3 = 50 points, 4 = 73 points, 5 = 87 points. If not, you take the exam, all earned points are burned, the exam consists of 10 problems. Be sure to submit IDZ on time, write tests normally; if they are poorly written but the test is good, there will be an interview where the student must explain how they solved the problems. May sometimes check homework for pluses. Do not be late for lectures."
       },
       {
         "id": "PII",
         "text": "Пономерев И.И.",
-        "answer": "Орг и история Россия/ 45-летний девственник, скуф и маленький сыночек. На его пары советую не одевать открытую одежду( с хеллоу Кити). Он очень озобоченный и любит смотреть на открытые места женщин и их жопу. В целом на его парах ничем заниматься не надо, главное сидеть и говорить ему да на все замечания, а также желательно беруши брать на практики."
+        "answer": "Орг и история Россия/ 45-летний девственник, скуф и маленький сыночек. На его пары советую не одевать открытую одежду( с хеллоу Кити). Он очень озобоченный и любит смотреть на открытые места женщин и их жопу. В целом на его парах ничем заниматься не надо, главное сидеть и говорить ему да на все замечания, а также желательно беруши брать на практики.",
+        "answer_en": "Organizational and Russian history. A 45-year-old virgin, a 'skuf' and a little son. I advise you not to wear revealing clothes (with Hello Kitty) to his classes. He is very obsessed and likes to look at women's exposed areas and their butts. Overall, you don't need to do anything in his classes, just sit and say 'yes' to all his remarks, and it's advisable to bring earplugs to practicals."
       }
     ]
   }
