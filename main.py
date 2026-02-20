@@ -1,14 +1,13 @@
 import telebot
 from telebot import types
 
-# ---------- НАСТРОЙКИ ----------
-TOKEN = '8220423257:AAFk0zQ35uNJXYHxzvVgudyb-_nzu4OsePU'   # замените при необходимости
-ADMIN_CHAT_ID = 1913203736  # ⚠️ ВСТАВЬТЕ СВОЙ ЧАТ-ID (можно узнать у @userinfobot)
-# --------------------------------
+TOKEN = '8220423257:AAFk0zQ35uNJXYHxzvVgudyb-_nzu4OsePU'   
+ADMIN_CHAT_ID = 1913203736
+
 
 bot = telebot.TeleBot(TOKEN)
 
-# Состояния пользователей: True если ожидается ввод вопроса
+
 waiting_for_question = {}
 
 # ---------- База данных ----------
